@@ -7,15 +7,15 @@ def arquivo(url):
     txt = arq.readlines()
     aux_d = 0
 
-    aux_lst = []
     dic = {}
     for i in txt:
-        #pessoa = str(aux_lst[:1:])
-        #preferidos = aux_lst[1::]
-        aux_lst = txt[aux_d].split()
-        dic.update({aux_d: aux_lst})
+
+
+        linha = txt[aux_d].split()
+        dic[linha[0]] = linha[1:]
         aux_d += 1
-    print(dic[0])
+    arq.close()
+    print(dic)
     #te = dic.keys()
     #te2 = te[:1:]
     #te3 = ["['Renata']"]
@@ -27,4 +27,4 @@ def arquivo(url):
     #print(lst.values())
 
 
-arquivo("C:\Users\Shen\PycharmProjects\ED\Problema do Rei Arthur\casamento.txt")
+arquivo("C:\Users\lucas.shen\PycharmProjects\EstruturaDados\Problema do Rei Arthur\casamento.txt")

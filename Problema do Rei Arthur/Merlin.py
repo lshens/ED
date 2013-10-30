@@ -34,15 +34,16 @@ def arquivo(url):
     aux_d = 0
     dic = {}
     for i in txt:
-        aux_lst = txt[aux_d].split()
-        dic.update({aux_d: aux_lst})
+        linha = txt[aux_d].split()
+        dic[linha[0]] = linha[1:]
         aux_d += 1
-    return dic
+    arq.close()
+    return dic.values()
 
 #print ('Permutações')
 #for p in permutacoes(['Adriano','Bruno', 'Diogo', 'Eclis', 'Gabriel', 'Leandro', 'Walber']):
 #    print (p)
 
 print ('Enumerações')
-for p in enumeracoes(arquivo("C:\Users\Shen\PycharmProjects\ED\Problema do Rei Arthur\casamento.txt")):
+for p in enumeracoes(arquivo("C:\Users\lucas.shen\PycharmProjects\EstruturaDados\Problema do Rei Arthur\casamento.txt")):
     print (p)
