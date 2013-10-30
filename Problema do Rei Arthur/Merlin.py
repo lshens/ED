@@ -31,12 +31,13 @@ def permutacoes(items):
 def arquivo(url):
     arq = open(url)
     txt = arq.readlines()
-    x = 0
-    f = []
+    aux_d = 0
+    dic = {}
     for i in txt:
-        f.append(txt[x].split())
-        x += 1
-    return f
+        aux_lst = txt[aux_d].split()
+        dic.update({aux_d: aux_lst})
+        aux_d += 1
+    return dic
 
 #print ('Permutações')
 #for p in permutacoes(['Adriano','Bruno', 'Diogo', 'Eclis', 'Gabriel', 'Leandro', 'Walber']):
