@@ -34,13 +34,14 @@ def arquivo(url):
     x = 0
     f = []
     for i in txt:
-        f.append(txt[i].split())
+        f.append(txt[x].split())
         x += 1
     return f
-print ('Permutações')
-for p in permutacoes(['Adriano','Bruno', 'Diogo', 'Eclis', 'Gabriel', 'Leandro', 'Walber']):
-    print (p)
 
-#print ('Enumerações')
-#for p in enumeracoes(arquivo("d:\casamento.txt")):
+#print ('Permutações')
+#for p in permutacoes(['Adriano','Bruno', 'Diogo', 'Eclis', 'Gabriel', 'Leandro', 'Walber']):
 #    print (p)
+
+print ('Enumerações')
+for p in enumeracoes(arquivo("C:\Users\Shen\PycharmProjects\ED\Problema do Rei Arthur\casamento.txt")):
+    print (p)
