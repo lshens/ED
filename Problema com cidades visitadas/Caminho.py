@@ -25,7 +25,8 @@ def percorre(matriz):
     aux = []
     cont = 1
     for linha in range(len(matriz)):
-        for coluna in range(len(matriz)):
+        for coluna in range(len(matriz[0])):
+            print(matriz[linha][coluna])
             #Se um "pixel" tem valor 1, verificamos seu vizinho de cima e da esquerda
             if matriz[linha][coluna] == 1:
                 #Se ambos são ZERO, um novo objeto começa neste pixel
@@ -40,7 +41,9 @@ t = '''101
        000
        101'''
 
-print("Entrada:")
-imprimiMatriz(geraMatriz(t))
+#print("Entrada:")
+#imprimiMatriz(geraMatriz(t))
+
+print(percorre(geraMatriz(t)))
 
 
