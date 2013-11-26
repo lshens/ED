@@ -1,15 +1,16 @@
 # -*- coding: utf-8 -*-
 #Lucas Shen e Paloma exercicio E 5.22
+#Este exercicio funciona apenas com o Python 2.7
 from random import choice
 
 def minimo(grafo):
-    v = choice()
+    v = choice(grafo.keys())
     mi = g[v]
     for i in grafo:
-        if len(grafo[i]) < len(mi):
+        if len(grafo[i]) < len(mi): #escolhe o vertice com o minimo de arestas
             mi = grafo[i]
             v = i
-        if len(grafo[i]) == len(mi):
+        if len(grafo[i]) == len(mi): #se as arestas são de tamanho igual, escolhe o menor indice
             if i < v:
                 mi = grafo[i]
                 v = i
@@ -30,22 +31,6 @@ g[6] = [1, 3]
 g[7] = [1, 2, 3, 4, 5]
 
 x = []
-#h = g
-#removidos = [False,False,False,False,False,False,False]
-#v_next = []
-
-#v = minimo(g) # pega o minimo
-#v_next = g.get(7)
-#print(g)
-#g.pop(v) #remove o vertice
-#g.pop(min(v_next)) #  remove o seguinte
-
-
-
-#print(g)
-#print(v_next.pop(min(v_next)))
-#print(v_next)
-#print(g)
 y = 0
 while g != {}:
     v = minimo(g) #recebe o minimo
@@ -58,7 +43,6 @@ while g != {}:
         g.pop(e[y]) #remove vertice do grafo
         e.pop(y) #remove da lista de aresta
 print(x)
-#print(g)
 
 
 
