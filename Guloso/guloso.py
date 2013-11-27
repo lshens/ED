@@ -1,16 +1,15 @@
 # -*- coding: utf-8 -*-
 #Lucas Shen e Paloma exercicio E 5.22
-#Este exercicio funciona apenas com o Python 2.7
 from random import choice
 
 def minimo(grafo):
-    v = choice(grafo.keys())
+    v = choice(list(grafo.keys()))
     mi = g[v]
     for i in grafo:
         if len(grafo[i]) < len(mi): #escolhe o vertice com o minimo de arestas
             mi = grafo[i]
             v = i
-        if len(grafo[i]) == len(mi): #se as arestas são de tamanho igual, escolhe o menor indice
+        if len(grafo[i]) == len(mi): #se as arestas são de tamanho igual, escolhe o vertice de menor indice
             if i < v:
                 mi = grafo[i]
                 v = i
